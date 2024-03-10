@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Narad</title>
+
+    <style>
+
+
+        html{
+            height: 99.7%;
+            /* border: 1px solid purple; */
+        }
+
+        body {
+            margin: 0;
+           
+            height: 100%;
+
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .main {
+            display: flex;
+            /* border: 1px solid black; */
+            height: 100%;
+
+        }
+
+
+        header.menu {
+            display: flex;
+            /* border: 2px solid rgb(255, 0, 0); */
+            max-height: 100%;
+            width: 15%;
+            justify-content: center;
+        }
+
+
+
+        .menu div div a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .conmain {
+            /* width: 30%; */
+            /* border: 2px solid gold; */
+            padding: 5px 0px 0px 0px;
+            width: 70%;
+            position: relative;
+
+        }
+
+        div.logo {
+            display: flex;
+            padding: 5px;
+            margin: 10px 0px 0px 10px;
+            width: max-content;
+            border-radius: 20px;
+        }
+
+
+        .logo a img {
+            height: 30px;
+            border-radius:13px ;
+        }
+
+
+
+       div.meop {
+            /* border: 2px solid black; */
+            border-radius: 20px;
+            margin: 17px 0px;
+            /* padding: 8px; */
+            width: fit-content;
+
+        }
+
+        .meop a {
+            display: flex;
+            margin: 0px;
+            padding: 5px;
+            height: fit-content;
+
+        }
+
+
+
+        .mainmenu {
+            display: flex;
+            padding: 5px;
+        }
+
+        div.conicon {
+
+            display: flex;
+            align-items: center;
+            padding: 0px 15px 0px 0px;
+            border-radius: 20px;
+
+        }
+
+        .textme p {
+          
+            font-size: 20px;
+            margin: 0px;
+            display: inline;
+
+        }
+
+        /* .conicon svg path{
+            width: 100px;
+        } */
+        .meop a div {
+            /* border: 2px solid navy; */
+            /* padding: 9px; */
+            width: max-content;
+            font-size: 13px;
+            border-radius: 20px;
+        }
+
+        .headpost {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 234.2px;
+            height: 47px;
+        }
+
+        .headpost button {
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            background-color: rgb(29, 155, 240);
+            border: none;
+        }
+
+        .headpost button span {
+            font-size: 16px;
+          
+            color: #ffff;
+        }
+
+        .userPofile {
+            /* border: 1px solid lightcoral; */
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 70px;
+
+        }
+
+        .headprofile {
+            display: flex;
+            width: 100%;
+          
+        }
+
+        .pfp_head {
+            margin: 0px 10px 0px 10px;
+        }
+
+        .userinfo_head {
+            /* border: 1px solid hotpink; */
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+
+        .userName_Tag {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            flex-direction: column;
+            /* border: 1px solid black; */
+            width: 100%;
+            height: 100%;
+        }
+
+        .headname {
+           
+            font-size: 14px;
+        }
+
+        .ghove:hover {
+            background-color: rgb(163, 163, 163);
+        }
+
+        .line {
+            height: 100%;
+            width: 1px;
+            background-color: rgba(163, 163, 163, 0.37);
+        }
+
+        .user {
+            /* border: 1px solid rgb(0, 93, 103); */
+            width: 70%;
+            display: flex;
+            gap: 20px;
+            overflow: auto;
+        }
+
+        .content {
+            display: flex;
+            /* border: 2px solid rgb(9, 255, 0); */
+            width: 60%;
+            height: max-content;
+            /* justify-content: center; */
+            /* align-items: center; */
+            flex-direction: column;
+        }
+
+        .connav {
+            position: sticky;
+            top: 0;
+            display: flex;
+            width: 100%;
+            height: 45px;
+            padding: 0px 0px 0px 0px;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            /* border-bottom: 1px solid rgb(218, 218, 218); */
+
+            /* border: 1px solid rgb(255, 0, 187) */
+        }
+
+        .connav div a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .option {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 46%;
+            height: 99%;
+            /* border: 1px solid black; */
+        }
+
+        .navcen a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .option a div p {
+            font-size: 15px;
+        }
+
+        .option a {
+            width: 100%;
+        }
+
+
+        .setting {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 8%;
+            height: 99%;
+            /* border: 2px solid black; */
+        }
+
+        .seticon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid gold; */
+            border-radius: 50%;
+            width: 27px;
+            height: 27px;
+        }
+
+        .seticon div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid black; */
+        }
+
+        .seticon div svg {
+            /* border: 1px solid blue; */
+        }
+
+        .maTwitte {
+            display: flex;
+
+            width: 100%;
+        }
+
+        .twitteX {}
+
+        .postTwitte {
+            display: flex;
+            /* border: 1px solid black; */
+            padding: 0px 14px;
+            width: 99%;
+            height: fit-content;
+        }
+
+        .pfp img {
+            height: 40px;
+            display: flex;
+            border-radius: 50%;
+        }
+
+        .pfp_post {
+            width: 40px;
+            margin: 0px 10px 0px 0px;
+            padding: 8px 0px 0px 0px;
+        }
+
+        .twittepost {
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+
+        .twiinput {
+            display: flex;
+            /* justify-content: center; */
+            width: 100%;
+            height: 50%;
+            padding: 11px 0px 11px 6px;
+
+        }
+
+        #twitte {
+            width: 100%;
+            border: none;
+            /* height: 100%; */
+            padding: 0px 0px 0px 0px;
+            font-size: 18px;
+
+        }
+
+        #twitte:focus {
+            outline: none;
+        }
+
+        #twitte::placeholder {
+            font-size: 17px;
+
+        }
+
+        .mediaOption {
+            /* border: 1px solid black; */
+            display: flex;
+            height: 50%;
+            padding: 0px;
+            margin: 11px 0px 11px 0px;
+
+        }
+
+        .addmedia {
+            display: flex;
+            margin: 0px;
+            padding: 0px;
+            /* border: 1px solid rgb(255, 0, 0); */
+
+        }
+
+        .mediaButton {
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: 30px;
+            margin: 0px 0px 0px 0px;
+            padding: 0px;
+            border: none;
+            background: none;
+            /* border: 1px solid black; */
+        }
+
+        .mediaButton:hover {
+            background-color: rgba(0, 243, 243, 0.279);
+        }
+
+        .mediaButton:active {
+            background-color: aqua;
+        }
+
+        .postbutton {
+            width: 100%;
+            height: 100%;
+            /* border: 1px solid blue; */
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+        }
+
+        .post {
+            border: none;
+            height: 25px;
+            width: 60px;
+            border-radius: 50px;
+            font-size: 15px;
+            background-color: #1a8cd8;
+        }
+
+        .post:hover {
+            background-color: #156eaa;
+        }
+
+        .post:active {
+            background-color: #015a96;
+        }
+
+        .postext {
+            font-size: 15px;
+            color: aliceblue;
+           
+        }
+
+        .postcontent {
+            display: flex;
+            width: 100%;
+            height: max-content;
+            flex-direction: column;
+        }
+
+        .Vline {
+            height: 1px;
+            width: 100%;
+            background-color: rgba(163, 163, 163, 0.37);
+            display: flex;
+
+        }
+
+        .twitteposted {
+            display: flex;
+            /* border: 1px solid yellowgreen; */
+            height: fit-content;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .twittePFP {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            width: 60px;
+        }
+
+        .twittePFP img {
+            width: 35px;
+            border-radius: 50%;
+        }
+
+        .twitteContent {
+            /* border: 1px solid hotpink; */
+
+            width: 100%;
+        }
+
+        .userDetail {
+            /* border: 1px solid orange; */
+            display: flex;
+        }
+
+        .userinfo {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            /* border: 1px solid sienna; */
+        }
+
+        .username {
+            margin-right: 3px;
+            /* border: 1px solid rgb(0, 102, 83); */
+            display: flex;
+            height: max-content;
+
+        }
+
+        .name {
+            /* border: 1px solid indigo; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 3px;
+        }
+
+        .name p {
+            padding: 0px;
+            margin: 0px;
+            font-size: 13px;
+          
+        }
+
+        .bluetick {
+
+            /* border: 1px solid rgb(80, 130, 0); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bluetick svg {
+            fill: #1d9af1
+        }
+
+        .usertag {
+            margin-right: 3px;
+            display: flex;
+            align-items: center;
+            height: max-content;
+        }
+
+        .usertag p {
+        
+            font-size: 12px;
+            color: #73818a;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .dot {
+            display: flex;
+            align-items: center;
+        }
+
+        .blankdot {
+            /* border: 1px solid seagreen; */
+            border-radius: 50%;
+            margin-right: 3px;
+            width: 3px;
+            height: 3px;
+            background-color: #47555e;
+        }
+
+        .time {
+            display: flex;
+            align-items: center;
+        }
+
+        .time p {
+           
+            font-size: 12px;
+            color: #73818a;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .threedot {
+            display: flex;
+            justify-content: end;
+            width: max-content;
+        }
+
+        .dotimg {
+            display: flex;
+            justify-content: end;
+            /* width: 40px; */
+        }
+
+        .dotimg svg {
+            fill: #73818a;
+            width: 15px;
+        }
+
+        .postcantent p {
+           
+            font-size: 13px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .postmedia {
+            display: flex;
+            margin-top: 11px;
+        }
+
+        .postdetail {
+            margin: 0px 0px 0px 0px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            height: 30px;
+            /* border: 1px solid rgb(255, 134, 134); */
+            padding: 5px 0px 5px 0px;
+        }
+
+        .cslv {
+            display: flex;
+            width: 90%;
+
+            /* border: 1px solid rgb(255, 134, 134); */
+
+        }
+
+        .posoption {
+            display: flex;
+            width: 25%;
+            height: 100%;
+            /* border: 1px solid black; */
+            align-items: center;
+        }
+
+
+
+        .hoca {
+            /* margin: -15; */
+            /* z-index: 0; */
+            display: flex;
+            /* border: 1px solid hotpink; */
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hoca:hover {
+            background-color: #1d9af1;
+            opacity: 0.4;
+        }
+
+        .hoca svg {
+            padding: 7.7px;
+        }
+
+        .hoca svg:hover {
+            fill: #00ff55;
+            opacity: 1;
+
+        }
+
+        .posop {
+            display: flex;
+            /* border: 1px solid rgb(157, 0, 0); */
+        }
+
+        .imgfram img {
+            border-radius: 20px;
+            width: 100%;
+        }
+
+        .info {
+            display: flex;
+            /* border: 1px solid rgb(0, 94, 255); */
+            width: 35%;
+        }
+
+        .info div {
+            display: flex;
+            width: 100%;
+            height: 30px;
+            border: none;
+            border-radius: 30px;
+            background-color: rgb(154, 154, 154);
+            /* height:max-content; */
+
+        }
+
+        div.Searchbox {
+            display: flex;
+            height: 100%;
+
+        }
+
+        .Searchbox input {
+            /* margin: 10px; */
+            padding: 12px;
+            border: none;
+            background-color: transparent;
+            border-radius: 20px;
+            height: 100%;
+            width: 100%;
+
+            /* font-size: 18px; */
+        }
+
+        .Searchbox input[type=search]:focus {
+            outline: none;
+        }
+
+        .Searchbox input[type=search]::placeholder {
+            color: black;
+        }
+
+        div.icon {
+            display: flex;
+            height: 100%;
+            width: 25px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon img {
+            height: 15px;
+            padding: 0px 0px 0px 11px;
+        }
+
+        .conicon:hover {
+            background: none;
+            /* border-radius: 20px; */
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="main">
+        <header class="menu">
+            <div class="conmain">
+                <div>
+
+                    <div class="logo meop ghove">
+                        <a href="#"><img src="/logo/Screenshot 2024-03-08 153955.png" alt="Narad"></a>
+                    </div>
+
+                    <div class="meop ghove">
+                        <a href="/index.html" rel="noopener noreferrer">
+                            <div class="mainmenu">
+                                <div class="conicon "><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                        viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path
+                                            d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                                    </svg></div>
+                                <div class="textme">
+                                    <p>Home</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="meop ghove">
+                        <a href="http://" rel="noopener noreferrer">
+                            <div class="mainmenu">
+                                <div class="conicon"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path
+                                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                                    </svg>
+                                </div>
+                                <div class="textme">
+                                    <p>Explore</p>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="meop ghove">
+                        <a href="http://" rel="noopener noreferrer">
+                            <div class="mainmenu">
+                                <div class="conicon"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                        viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path
+                                            d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z" />
+                                    </svg></div>
+                                <div class="textme">
+                                    <p>Notifications</p>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="meop ghove">
+                        <a href="http://" rel="noopener noreferrer">
+                            <div class="mainmenu">
+                                <div class="conicon"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path
+                                            d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                                    </svg></div>
+                                <div class="textme">
+                                    <p>Messages</p>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="meop ghove">
+                        <a href="http://" rel="noopener noreferrer">
+                            <div class="mainmenu">
+                                <div class="conicon"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path
+                                            d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z" />
+                                    </svg></div>
+                                <div class="textme">
+                                    <p>Lists</p>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="meop ghove">
+                        <a href="http://" rel="noopener noreferrer">
+                            <div class="mainmenu">
+                                <div class="conicon"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                        viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path
+                                            d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z" />
+                                    </svg></div>
+                                <div class="textme">
+                                    <p>Bookmarks</p>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="meop ghove">
+                        <a href="http://" rel="noopener noreferrer">
+                            <div class="mainmenu">
+                                <div class="conicon"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path
+                                            d="M96 0C60.7 0 32 28.7 32 64V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H96zM208 288h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H144c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM512 80c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V80zM496 192c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm16 144c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V336z" />
+                                    </svg></div>
+                                <div class="textme">
+                                    <p>Communities</p>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="meop ghove">
+                        <a href="http://" rel="noopener noreferrer">
+                            <div class="mainmenu">
+                                <div class="conicon"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                        viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path
+                                            d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z" />
+                                    </svg></div>
+                                <div class="textme">
+                                    <p>More</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+                <div class="userPofile">
+
+                    <div class="headprofile">
+                        <div class="pfp_head pfp">
+                            <img src="https://i.redd.it/0gw1ax20unt91.jpg" alt="">
+                        </div>
+                        <div class="userinfo_head">
+                            <div class="userName_Tag">
+                                <div class="username headname">
+                                    <p>Khushal</p>
+                                </div>
+                                <div class="usertag headtag">
+                                    <p>@Khushal</p>
+                                </div>
+                            </div>
+                            <div class="threedot">
+                                <div class="dotimg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                        viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path
+                                            d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+        </header>
+        <div class="line"></div>
+        <div class="user">
+            <div class="content">
+            </div>
+            <div class="info">
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
