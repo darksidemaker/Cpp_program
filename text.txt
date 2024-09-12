@@ -1,0 +1,31 @@
+Q1) Write a class program to find out live racer in F1 arena.Use appropriate class data member. Follow the OOPS data hiding technique.
+
+Q2)wap a car class having attributes like
+string make;
+    string model;
+    string color;
+    int year;
+    bool isEngineOn;
+initialize all attributes using constructor only.
+function are
+start() 
+stop()
+displayDetails()
+
+in start() and stop() function check status of engine after that take decision or action on start and stop function.Choose method and constructor as per need either default or parameterized.
+Also make sure you have to implement all using encapsulation concept.
+
+q3) Imagine a tollbooth at a bridge. Cars passing by the booth are expected to pay a 50 cent
+toll. Mostly they do, but sometimes a car goes by without paying. The tollbooth keeps
+track of the number of cars that have gone by, and of the total amount of money collected. 
+Model this tollbooth with a class called tollBooth. The two data items are a type
+unsigned int to hold the total number of cars, and a type double to hold the total amount
+of money collected. A constructor initializes both of these to 0. A member function called
+payingCar() increments the car total and adds 0.50 to the cash total. Another function,
+called nopayCar(), increments the car total but adds nothing to the cash total. Finally, a
+member function called display() displays the two totals. Make appropriate member
+functions const.the program to print out the total cars and total cash, and total paying and non paying car.
+
+
+
+Q3) Placement Eligibility class  

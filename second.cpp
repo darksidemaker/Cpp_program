@@ -19,10 +19,7 @@ int CarsRacer::carsRacerCount = 0;
 int main()
 {
     CarsRacer car1;
-    car1.displayCount();
-    CarsRacer car2;
-    car2.displayCount();
-    CarsRacer car3;
-    car3.displayCount();
+    
+    
     return 0;
 }
