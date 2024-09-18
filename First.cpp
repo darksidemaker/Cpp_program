@@ -12,7 +12,7 @@ public:
     }
     void displayCount()
     {
-        cout << "Number of CarsRacer objects= " << carsRacerCount << endl;
+        cout << "Number of Alive F1 Cars: " << carsRacerCount << endl;
     }
 };
 int CarsRacer::carsRacerCount = 0;

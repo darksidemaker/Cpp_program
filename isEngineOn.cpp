@@ -3,47 +3,47 @@ using namespace std;
 class Cars
 {
 private:
-    string make = "Nano";
-    string model = "TATA Nano XE";
-    string color = "Red";
-    int year = 2017;
+    string make = "Tata";
+    string model = "Nexon";
+    string color = "blue";
+    int year = 2020;
     bool isEngineOn;
 
 public:
-    Cars(bool engineStatus)
+    Cars(bool engineOnOff)
     {
-        isEngineOn = engineStatus;
+        isEngineOn = engineOnOff;
     }
 
-    void getter()
+    void getter_car()
     {
         cout << "Car make :" << make << endl
              << "Car model :" << model << endl
              << "Car color :" << color << endl
              << "Car year :" << year << endl;
 
-        if (isEngineOn == 1)
+        if (isEngineOn == true)
         {
-            cout << "Car is On" << endl;
+            cout << "Car Engine start" << endl;
         }
         else
         {
-            cout << "Car is Off" << endl;
+            cout << "Car Engine stop" << endl;
         }
     }
 
     void start()
     {
-        isEngineOn = 1;
+        isEngineOn = true;
     }
     void stop()
     {
-        isEngineOn = 0;
+        isEngineOn = false;
     }
 
-    void engineOnOff()
+    void engineStatus()
     {
-        if (isEngineOn == 1)
+        if (isEngineOn == true)
         {
             stop();
         }
@@ -55,20 +55,20 @@ public:
 };
 int main()
 {
-    Cars car1(0);
-    car1.getter();
-    
+    Cars car(false);
+    car.getter_car();
+
     cout << endl;
-    car1.engineOnOff();
-    car1.getter();
+    car.engineStatus();
+    car.getter_car();
     cout << endl;
 
-    car1.engineOnOff();
-    car1.getter();
+    car.engineStatus();
+    car.getter_car();
     cout << endl;
 
-    car1.engineOnOff();
-    car1.getter();
+    car.engineStatus();
+    car.getter_car();
     cout << endl;
 
     return 0;
